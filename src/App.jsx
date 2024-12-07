@@ -1,11 +1,23 @@
-
-import { useRef, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
-import axios from 'axios';
+import Navbar from './Components/navbar'
+import Home from './Pages/home'
+import Blog from './Pages/blog'
+import Contact from './Pages/contact'
+import About from './Pages/about'
 
 function App() {
   return (
-    <h2>Hello World</h2>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 
