@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Home() {
     return (
-        <div>Welcome to Home Page</div>
+        <div className='text-4xl flex justify-center h-dvh items-center'>Welcome to Home Page</div>
     )
 }
